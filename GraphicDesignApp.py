@@ -19,7 +19,7 @@ class GraphicDesignApp:
         # Paleta de colores
         self.color = "#000000"  # Color inicial: negro
 
-        # Configurar el lienzo
+        # Tamaño del liezo
         self.canvas = tk.Canvas(self.root, bg="white", width=600, height=400)
         self.canvas.pack(pady=20)
         
@@ -52,7 +52,7 @@ class GraphicDesignApp:
         self.canvas.create_oval(x - size, y - size, x + size, y + size, fill=self.color, outline=self.color)
 
     def save_design(self):
-        """Guardar el contenido del lienzo como una imagen"""
+        """Guardar el trabajo como imagen"""
         file_path = filedialog.asksaveasfilename(defaultextension=".png",
                                                  filetypes=[("PNG files", "*.png"), ("All files", "*.*")])
         if file_path:
